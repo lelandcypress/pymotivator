@@ -9,18 +9,18 @@ from twilio.rest import Client
 # and set the environment variables. See http://twil.io/secure
 
 def dialer(message_text):
-    account_sid = 
-    auth_token = 
+    account_sid =''
+    auth_token ='' 
     client = Client(account_sid, auth_token)
 
     message = client.messages \
         .create(
             body=message_text,
-            from_='+15137902745',
-            to='+18432594904'
+            from_='',
+            to=''
         )
 
     print(message.sid)
 
 
-dialer(message_to_self)
+dialer(message)
